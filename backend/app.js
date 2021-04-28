@@ -23,6 +23,7 @@ mongoose.connect('mongodb+srv://panda:admin@cluster0.xhxx5.mongodb.net/myFirstDa
 
  app.use(bodyParser.json());
 
+app.use('/images', express.static(path.join(__dirname, 'image')));
 app.use('/api/sauces', sauceRoutes);
 app.use('/api/auth', authRoutes);
 

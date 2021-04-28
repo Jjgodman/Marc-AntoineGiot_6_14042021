@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('../backend/node_modules/mongoose');
 const path = require('path');
 
-//const sauceRoutes = require('./route/sauce');
+const sauceRoutes = require('./route/sauce');
 const authRoutes = require('./route/auth');
 
 const app = express();
@@ -23,7 +23,7 @@ mongoose.connect('mongodb+srv://panda:admin@cluster0.xhxx5.mongodb.net/myFirstDa
 
  app.use(bodyParser.json());
 
-//app.use('/api/sauce', sauceRoutes);
+app.use('/api/sauces', sauceRoutes);
 app.use('/api/auth', authRoutes);
 
 module.exports = app;

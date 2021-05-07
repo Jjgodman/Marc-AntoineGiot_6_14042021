@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 
 const User = require('../models/User');
 
+
 //route pour la création de compte
 exports.signup = (req, res, next) => {
     

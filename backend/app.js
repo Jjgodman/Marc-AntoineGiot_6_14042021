@@ -3,6 +3,16 @@ const express = require('../backend/node_modules/express');
 const bodyParser = require('body-parser');
 const mongoose = require('../backend/node_modules/mongoose');
 const path = require('path');
+const helmet = require("../node_modules/helmet");
+const  mongoSanitize  =  require ( '../node_modules/express-mongo-sanitize' ) ;
+const rateLimit = require("../node_modules/express-rate-limit");
+
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100 // limit each IP to 100 requests per windowMs
+});
+
 
 //importation des routes
 const sauceRoutes = require('./route/sauce');
@@ -26,6 +36,12 @@ app.use((req, res, next) => {
 });
 
 app.use(bodyParser.json());
+app.use(helmet());
+app.use(mongoSanitize({
+  replaceWith: '_'
+}));
+app.use(limiter);
+
 
 //connexion aux routes
 app.use('/images', express.static(path.join(__dirname, 'image')));

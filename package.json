@@ -1,6 +1,9 @@
 {
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "express-mongo-sanitize": "^2.0.2",
+    "express-rate-limit": "^5.2.6",
+    "helmet": "^4.6.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose-unique-validator": "^2.0.3"
   }

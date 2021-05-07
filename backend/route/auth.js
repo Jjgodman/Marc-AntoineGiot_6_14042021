@@ -7,7 +7,7 @@ const auth = require('../middleware/auth');
 const authCtrl = require('../controllers/auth')
 
 //création des differente route possible avec leur connexion au controllers
-router.post('/signup', auth, authCtrl.signup);
-router.post('/login', auth, authCtrl.login);
+router.post('/signup', authCtrl.signup);
+router.post('/login', authCtrl.login);
 
 module.exports = router;

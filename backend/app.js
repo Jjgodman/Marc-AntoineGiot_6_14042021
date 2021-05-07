@@ -7,6 +7,9 @@ const helmet = require("../node_modules/helmet");
 const  mongoSanitize  =  require ( '../node_modules/express-mongo-sanitize' ) ;
 const rateLimit = require("../node_modules/express-rate-limit");
 
+const dotenv  = require('../node_modules/dotenv');
+dotenv.config();
+
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
@@ -21,7 +24,7 @@ const authRoutes = require('./route/auth');
 const app = express();
 
 //connexion à la mongoose
-mongoose.connect('mongodb+srv://panda:admin@cluster0.xhxx5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect(process.env.DB,
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))

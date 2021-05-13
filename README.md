@@ -8,5 +8,5 @@ Cloner l'api
 
 'ng serve' dans /frontend
 
-'nodemon server' dans /backend
+'node server' dans /backend
 

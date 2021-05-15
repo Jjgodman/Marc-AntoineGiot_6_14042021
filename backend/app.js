@@ -3,11 +3,11 @@ const express = require('../backend/node_modules/express');
 const bodyParser = require('body-parser');
 const mongoose = require('../backend/node_modules/mongoose');
 const path = require('path');
-const helmet = require("../node_modules/helmet");
-const  mongoSanitize  =  require ( '../node_modules/express-mongo-sanitize' ) ;
-const rateLimit = require("../node_modules/express-rate-limit");
+const helmet = require("../backend/node_modules/helmet");
+const  mongoSanitize  =  require ( '../backend/node_modules/express-mongo-sanitize' ) ;
+const rateLimit = require("../backend/node_modules/express-rate-limit");
 
-const dotenv  = require('../node_modules/dotenv');
+const dotenv  = require('../backend/node_modules/dotenv');
 dotenv.config();
 
 

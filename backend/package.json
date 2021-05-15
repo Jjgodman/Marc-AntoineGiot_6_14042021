@@ -1,4 +1,3 @@
-
 {
   "name": "backend",
   "version": "1.0.0",
@@ -12,6 +11,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "helmet": "^4.6.0",
     "mong": "^2.0.2",
     "mongodb": "^3.6.6",
     "mongodb-core": "^3.2.7",

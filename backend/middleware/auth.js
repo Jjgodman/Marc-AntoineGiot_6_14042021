@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken');
+const jwt = require('../node_modules/jsonwebtoken');
 const dotenv  = require('../../backend/node_modules/dotenv');
 dotenv.config();
 

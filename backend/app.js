@@ -1,8 +1,8 @@
 //importation des bibliotheque nécessaire
 const express = require('../backend/node_modules/express');
-const bodyParser = require('body-parser');
+const bodyParser = require('../backend/node_modules/body-parser');
 const mongoose = require('../backend/node_modules/mongoose');
-const path = require('path');
+const path = require('../backend/node_modules/path');
 const helmet = require("../backend/node_modules/helmet");
 const  mongoSanitize  =  require ( '../backend/node_modules/express-mongo-sanitize' ) ;
 const rateLimit = require("../backend/node_modules/express-rate-limit");
